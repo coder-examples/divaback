@@ -34,3 +34,5 @@ app.get('/bvefrv2reh9fg5bfvv8ry9n5bybvrvfnhy4btvvfhhygbt6gvdc2r', (req, res) => 
     console.log('All reviews were deleted')
     res.send('Deleted')
 })
+
+app.listen(8080)
