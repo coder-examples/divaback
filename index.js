@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/addReview', (req, res) => {
-    reviews.push({name:req.body.name, phone: req.body.phone, email: req.body.email, rating: req.body.rating, message: req.body.message});
+    reviews.push(new Review(req.body));
     console.log(req.body)
-    res.json(req.body)
+    res.redirect('/');
 })
 
 app.get('/bvefrv2reh9fg5bfvv8ry9n5bybvrvfnhy4btvvfhhygbt6gvdc2r', (req, res) => {
@@ -35,4 +35,4 @@ app.get('/bvefrv2reh9fg5bfvv8ry9n5bybvrvfnhy4btvvfhhygbt6gvdc2r', (req, res) => 
     res.send('Deleted')
 })
 
-app.listen(process.env.PORT || 8080 )
+app.listen(process.env.PORT||8080)
