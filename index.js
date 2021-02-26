@@ -9,22 +9,12 @@ app.use(bp.json());
 
 let reviews = [];
 
-class Review {
-    constructor({ name, rating, message, phone, email }) {
-        this.name = name;
-        this.rating = rating;
-        this.message = message;
-        this.phone = phone;
-        this.email = email;
-    }
-}
-
 app.get('/', (req, res) => {
     res.json(reviews);
 })
 
 app.post('/addReview', (req, res) => {
-    reviews.push(new Review(req.body));
+    reviews.push({ name: req.body.name, rating: req.body.rating, email: req.body.email, phone: req.body.phone, message: req.body.message });
     console.log(req.body)
     res.redirect('/');
 })
