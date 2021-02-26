@@ -35,4 +35,4 @@ app.get('/bvefrv2reh9fg5bfvv8ry9n5bybvrvfnhy4btvvfhhygbt6gvdc2r', (req, res) => 
     res.send('Deleted')
 })
 
-app.listen(8080 )
+app.listen(process.env.PORT || 8080 )
