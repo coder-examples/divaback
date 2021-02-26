@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/addReview', (req, res) => {
-    reviews.push(new Review(req.body));
+    reviews.push(req.body);
     console.log(req.body)
-    res.send(req.body)
+    res.json(req.body)
 })
 
 app.get('/bvefrv2reh9fg5bfvv8ry9n5bybvrvfnhy4btvvfhhygbt6gvdc2r', (req, res) => {
